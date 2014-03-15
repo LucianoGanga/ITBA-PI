@@ -17,7 +17,6 @@ No considerar el carácter ‘ñ’ como letra. (En no más de 15 líneas).
 #include <stdio.h>
 #include "getnum.h"
 
-#define TRACE { printf("Ejecutando %s. linea: %d\n", __FILE__, __LINE__); }
 #define DIFERENCIA ('a'-'A') // Conversor de minusculas a mayusculas
 
 int main(void) {
@@ -39,6 +38,5 @@ int main(void) {
 	else 
 		respuesta = menM;
 	printf("La menor letra es: %c\n", respuesta);
-	TRACE
 	return 0;
 }

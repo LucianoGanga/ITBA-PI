@@ -16,8 +16,6 @@ b) Resolverlo con un único ciclo for.
 #include <stdio.h>
 #include "getnum.h"
 
-#define TRACE { printf("Executing %s line %d\n", __FILE__, __LINE__); }
-
 int main(void) {
 	int lado = getint("Introduce el lado del cuadrado: ");
 	int i=1, n=1;

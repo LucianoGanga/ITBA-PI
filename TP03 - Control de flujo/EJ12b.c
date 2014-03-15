@@ -20,8 +20,6 @@ c) 19,27,35,43,51
 #define STEP -6
 #define CANTIDAD 6
 
-#define TRACE { printf("Executing %s line %d\n", __FILE__, __LINE__); }
-
 int main(void) {
 	unsigned char i = 1;
 	for(int numero = INICIO; i <= CANTIDAD; numero+= STEP){

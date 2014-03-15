@@ -23,7 +23,6 @@
 #include <stdio.h>
 #include "getnum.h"
 
-#define TRACE { printf("Executing %s line %d\n", __FILE__, __LINE__); }
 #define FIJOSEMANA 300
 
 int main(void) {

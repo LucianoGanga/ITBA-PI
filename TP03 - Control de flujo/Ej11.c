@@ -17,8 +17,6 @@ para N desde 1 hasta 20. (En no más de 6 líneas).
 #define INICIO 1
 #define FIN 20
 
-#define TRACE { printf("Executing %s line %d\n", __FILE__, __LINE__); }
-
 int main(void) {
 	int numero;
 	printf("N\t10*N\t100*N\t1000*N\n");

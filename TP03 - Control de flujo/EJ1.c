@@ -14,8 +14,6 @@ sin tener en cuenta el caracter ‘ñ’. (En no más de 15 líneas). */
 #include <stdio.h>
 #include "getnum.h"
 
-#define TRACE { printf("Executing %s line %d\n", __FILE__, __LINE__); }
-
 int main() {
     printf("Ingresar un caracter:\n");
     int c = getchar();
