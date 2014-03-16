@@ -22,24 +22,21 @@ int main(void) {
 	long int factorial = 1;
 	numero = getint("Introducir un numero positivo: ");
 	if(numero >= 0){
-		for(i = 0;i < numero;i++){
-			factorial *= (numero - i);
+		for(i = 1;i <= numero;i++){
+			factorial*= i;
 		}
 		printf("Su factorial es: %ld\n", factorial);
 	} else {
 		printf("Valor invalido.\n");
 	}
 }
-
+	
 /*int main(void) {
 	int i, n, lim;
 	long int factorial = 1;
 	lim = getint("Hasta que numero?: ");
 	for(n=1;n<=lim;n++){	
-		for(i = 0;i < n;i++){
-			factorial *= (n - i);
-		}
+		factorial*= n;
 		printf("Numero: %d, su factorial es: %ld\n", n, factorial);
-		factorial = 1;
 	}
 }*/

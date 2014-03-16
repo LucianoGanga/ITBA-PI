@@ -20,17 +20,35 @@ comparar con el verdadero valor de e).
 #include "getnum.h"
 
 int main(void) {
-	int termino = 1, i;
+	int termino;
 	long int factorial = 1;
-	double e = 1;
+	double e = 1.0, eAnt = 0.0;
 	printf("N\te\n");
-	printf("%d\t%f\n", termino, e);
-	for(termino = 2;termino<=10;termino++){
-		for(i = 1;i < termino;i++){
-			factorial *= (i);
-		}
-		e+=(1 / (double) factorial);
-		printf("%d\t%f\n", termino, e);
-		factorial = 1;
+	for(termino = 1;!(e == eAnt);termino++){
+		factorial*= termino;
+		printf("Numero: %d Factorial: %ld\n", termino, factorial);
+		eAnt = e;
+		e+=(1.0 / factorial);
+		printf("%d\t%.25f\n", termino, e);
 	}
 }
+
+/* Gonza's
+
+#include <stdio.h>
+#define DIFERENCIAL 0.00000000000001
+
+int main(void) {
+	double eNumber = 1.0;
+	double eNumberAlt = 0.0;
+	int factorial = 1;
+	int contador = 1;
+	printf("N\te\n");
+	while ( (eNumber - eNumberAlt) > DIFERENCIAL ) {
+		printf("%d\t%.15f\n", contador, eNumber);
+		eNumberAlt = eNumber; //Reservar el valor y posteriormente hacer la resta en el while
+		factorial *= contador; //Calculo factorial nuevo multiplicando el anterior por el num post.
+		contador++;	
+		eNumber += 1.0/factorial; //Polinomio de Taylor
+	}
+}*/
