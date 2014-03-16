@@ -27,10 +27,10 @@ int main(void) {
 	printf("%d\t%f\n", termino, e);
 	for(termino = 2;termino<=10;termino++){
 		for(i = 1;i < termino;i++){
-			factorial *= (termino - i);
+			factorial *= (i);
 		}
-		printf("Numero: %d, Factorial %ld\n", termino, factorial);
 		e+=(1 / (double) factorial);
 		printf("%d\t%f\n", termino, e);
+		factorial = 1;
 	}
 }
