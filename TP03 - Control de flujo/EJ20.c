@@ -7,15 +7,30 @@
 //
 
 /* Ejercicio 20
-Leer un número entero e indicar cuantos dígitos de ese número son iguales a 5. 
-Repetir para el caso de ser un número real, indicando cuántos 5 tiene en su parte 
-entera y cuántos en su parte decimal. (En no más de 10 líneas el primer caso, 
-y no más de 25 el segundo caso)
+Escribir un programa (en no más de 10 líneas) que calcule el valor de la 
+constante matemática e utilizando la fórmula e = 1 + 1/1! + 1/2! + 1/3! +... e 
+imprima una tabla que indique cantidad de términos de la serie y el resultado parcial, 
+con el siguiente formato:
+¿Qué criterio utilizaría para detener la secuencia? ( No usar cantidad fija de 
+términos ni preguntarle al usuario la cantidad de términos. Tampoco tendría sentido 
+comparar con el verdadero valor de e).
 */
 
 #include <stdio.h>
 #include "getnum.h"
 
 int main(void) {
-	
+	int termino = 1, i;
+	long int factorial = 1;
+	double e = 1;
+	printf("N\te\n");
+	printf("%d\t%f\n", termino, e);
+	for(termino = 2;termino<=10;termino++){
+		for(i = 1;i < termino;i++){
+			factorial *= (termino - i);
+		}
+		printf("Numero: %d, Factorial %ld\n", termino, factorial);
+		e+=(1 / (double) factorial);
+		printf("%d\t%f\n", termino, e);
+	}
 }
