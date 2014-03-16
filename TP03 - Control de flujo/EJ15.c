@@ -18,5 +18,6 @@ el equivalente decimal. (En no más de 10 líneas)
 #define TRACE { printf("Executing %s line %d\n", __FILE__, __LINE__); }
 
 int main(void) {
-	
+	int numero = getint("Introduce un numero en binario: ");
+	printf("%d", sizeof(numero));
 }
