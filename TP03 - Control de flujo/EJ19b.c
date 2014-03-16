@@ -21,12 +21,12 @@ int main(void) {
 	printf("Introduce un numero real: ");
 	while(((numero = getchar()) >= '0' && numero <= '9') || numero == '.'){
 		if(numero == '.'){
-			realState = 1;
+			realState = 1; // Para evitar el problema de mas de un punto puedo poner "+="
 		}
 		if(realState == 0){
 			if(numero == '5')
 				cincosE+= 1;
-		} else {
+		} else { // y aca agregar un if(realState == 1)
 			if(numero == '5')
 				cincosD+= 1;
 		}
