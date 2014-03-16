@@ -8,12 +8,14 @@
 
 /* Ejercicio 18
 Escriba un programa que lea un entero no negativo ( cero o mayor ) 
-y que calcule e imprima su factorial. En caso de ingresar un valor inválido, 
-imprimir un cartel aclarando cuáles son los valores válidos. (En no más de 10 líneas)
+y que calcule e imprima su factorial. En caso de ingresar un valor inválido, 
+imprimir un cartel aclarando cuáles son los valores válidos. (En no más de 10 líneas)
 */
 
 #include <stdio.h>
 #include "getnum.h"
+
+// Llega hasta el 20! inclusive, 21 ya da cualquier dato
 
 int main(void) {
 	int numero, i;
