@@ -22,6 +22,7 @@ No considerar el carácter ‘ñ’ como letra. (En no más de 15 líneas).
 int main(void) {
 	int c, menm = 'z', menM = 'Z';
 	unsigned char respuesta;
+	printf("Introduce un string: \n");
 	while((c = getchar()) == ' ' || (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')){
 		if(c >= 'A' && c <= 'Z'){
 			if(c <= menM){
