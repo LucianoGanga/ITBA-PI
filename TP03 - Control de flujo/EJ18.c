@@ -19,13 +19,13 @@ imprimir un cartel aclarando cuáles son los valores válidos. (En no más de 10
 
 int main(void) {
 	int numero, i;
-	long int factorial = 1;
+	unsigned long int factorial = 1;
 	numero = getint("Introducir un numero positivo: ");
 	if(numero >= 0){
 		for(i = 1;i <= numero;i++){
 			factorial*= i;
 		}
-		printf("Su factorial es: %ld\n", factorial);
+		printf("Su factorial es: %lu\n", factorial);
 	} else {
 		printf("Valor invalido.\n");
 	}
