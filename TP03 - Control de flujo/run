@@ -8,7 +8,7 @@ if [ $limArgumentos = "$#" ]
 then
 	echo -e "${yellow}-----> Generando ejecutable... \n${NC}"
 	echo -e "${yellow}----- WARNINGS AND ERRORS: ------\n${NC}"
-	gcc -Wall -pedantic -o $1.out $1.c getnum2.c
+	gcc -Wall -pedantic -g -o $1.out $1.c getnum2.c
 	if [ "$?" = 0 ]
 	then
 		sleep 1s
